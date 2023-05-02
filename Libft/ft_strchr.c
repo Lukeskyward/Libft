@@ -6,7 +6,7 @@
 /*   By: lucasda- <lucasda-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 16:43:38 by lucasda-          #+#    #+#             */
-/*   Updated: 2023/04/19 17:12:49 by lucasda-         ###   ########.fr       */
+/*   Updated: 2023/05/02 16:30:51 by lucasda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i] != c)
-	{
-		if (!s[i])
-			return (NULL);
-		i++;
-	}
-	return ((char *)s + i);
+	while (*s && (unsigned char)c != *s)
+		s++;
+	if ((unsigned char)c == *s)
+		return ((char *)s);
+	return (0);
 }

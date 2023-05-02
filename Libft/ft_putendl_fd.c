@@ -6,7 +6,7 @@
 /*   By: lucasda- <lucasda-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 14:55:53 by lucasda-          #+#    #+#             */
-/*   Updated: 2023/04/28 15:06:53 by lucasda-         ###   ########.fr       */
+/*   Updated: 2023/05/02 16:26:10 by lucasda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	if (!s || fd < 0)
+	if (fd < 0)
 		return ;
-	while (s[i++])
-		write(fd, &s[i], 1);
+	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }

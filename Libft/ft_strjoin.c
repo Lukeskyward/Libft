@@ -6,7 +6,7 @@
 /*   By: lucasda- <lucasda-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 14:24:07 by lucasda-          #+#    #+#             */
-/*   Updated: 2023/04/26 15:03:49 by lucasda-         ###   ########.fr       */
+/*   Updated: 2023/05/02 16:17:10 by lucasda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	while (s2[j])
 		ns[i++] = s2[j++];
+	ns[i] = '\0';
 	return (ns);
 }

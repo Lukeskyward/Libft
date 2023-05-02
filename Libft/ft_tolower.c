@@ -6,7 +6,7 @@
 /*   By: lucasda- <lucasda-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 16:36:55 by lucasda-          #+#    #+#             */
-/*   Updated: 2023/04/19 16:39:17 by lucasda-         ###   ########.fr       */
+/*   Updated: 2023/05/02 11:53:37 by lucasda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if (c < 65 && c > 90)
-		return (c);
-	return (c + 32);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
